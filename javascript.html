@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <h1 id="h1">this is my heading tag</h1>
+    <h1 id="time"></h1>
+    <button id="red">red</button>
+    <button id="yellow">yellow</button>
+    <button id="green">green</button>
+    <button id="blue">blue</button>
+    <button id="date">date</button>
+    <button id="pop">pop</button>
+    <script>
+        // console.log("hello java Script");
+        // alert("hello java Script");
+        // document.write("hello java script");
+
+        document.getElementById("red").onclick=function()
+        {
+            // console.log("hello m red hu")
+            document.getElementById("h1").style.color="red";
+            document.getElementById("body").style.backgroundColor="black";
+        }
+        document.getElementById("yellow").onclick=function()
+        {
+            // console.log("hello m yellow hu")
+            document.getElementById("h1").style.color="yellow";
+            document.getElementById("body").style.backgroundColor="red";
+        }
+        document.getElementById("green").onmousemove=function()
+        {
+            // console.log("hello m green hu")
+            document.getElementById("h1").style.color="green";
+            document.getElementById("body").style.backgroundColor="yellow";
+        }
+        document.getElementById("blue").onmousemove=function()
+        {
+            // console.log("hello m blue hu")
+            document.getElementById("h1").style.color="blue";
+            document.getElementById("body").style.backgroundColor="aqua";
+        }
+
+        document.getElementById("date").onclick=function()
+        {
+            document.getElementById("time").innerHTML=new Date();
+        }
+        document.getElementById("pop").onclick=function()
+        {
+            alert("hello java Script!!!!");
+        }
+    </script>
+</body>
+</html>

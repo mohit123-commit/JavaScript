@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="username" class="in" >
+    <input type="text" placeholder="father name" class="in">
+    <input type="text" placeholder="gender" class="in">
+    <input type="text" placeholder="address" class="in">
+    <button id="btn" >submit</button>
+
+    <script>
+        // document.getElementById("btn").onclick=function()
+        // {
+        
+        //     let l=document.getElementsByClassName("in")
+        //     console.log(l.length)
+
+            // for(let i=0;i<l.length;i++)
+            // {
+            //     // let a=document.getElementsByClassName("in")[i].value;
+            //     let a=l[i].value;
+            //     console.log(a)
+            // }
+
+            // for(let i of l)
+            // {
+            //     console.log(i.value)
+            // }
+        //  }
+
+        document.querySelector("#btn").onclick=function()             //for id = "#"  for class = "."  for tag = "button"
+        {
+            let a=document.querySelectorAll(".in")
+            console.log(a)
+
+            for(let i of a)
+            {
+                console.log(i.value)
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .full{
+            width: 60%;
+            border: 2px solid black;
+            padding: 20px;
+        }
+        .container{
+            height: 100vh;
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .upper{
+            /* border: 2px solid black; */
+            margin-bottom: 20px;
+        }
+        input{
+            padding: 8px;
+            width: 45%;
+        }
+        button{
+            padding: 8px;
+        }
+        .lower{
+            /* border: 2px solid black; */
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 10px;
+            
+        }
+        .box{
+            border: 2px solid black;
+            padding: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="full">
+            <div class="upper">
+                <input type="text" placeholder="enter your color name" id="inp">
+                <input type="number" placeholder="enter your div" id="val">
+                <button id="btn">submit</button>
+            </div>
+            <div class="lower">
+                <div class="box" id="1"></div>
+                <div class="box" id="2"></div>
+                <div class="box" id="3"></div>
+                <div class="box" id="4"></div>
+                <div class="box" id="5"></div>
+                <div class="box" id="6"></div>
+                <div class="box" id="7"></div>
+                <div class="box" id="8"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("btn").onclick=function(){
+            let color=document.getElementById("inp").value;
+            let val=document.getElementById("val").value;
+            document.querySelector("#inp").value= "";
+            document.querySelector("#val").value= "";
+            document.querySelector("#inp").focus();
+            
+            let box=document.querySelectorAll(".box");
+            
+            if(box.length<val)
+            {
+                alert("number will be less than 9")
+            }
+            else{
+                for(let i of box)
+            {
+                if(i.id==val)
+                {
+                    i.style.backgroundColor=color;
+                }
+            }
+            }
+        }
+    </script>
+</body>
+</html>
